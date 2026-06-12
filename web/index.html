@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Reservas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="sidebar">
+            <h2>Hotel Reservas</h2>
+            <button onclick="mostrarTela('quartos')">Quartos</button>
+            <button onclick="mostrarTela('reservas')">Reservas</button>
+            <button>Sobre</button>
+        </div>
+
+        <div class="content">
+            <div id="tela-quartos" class="tela">
+                <div class="topo">
+                    <h2>Quartos Cadastrados</h2>
+                    <button onclick="mostrarTela('cadastro-quarto')">+ Novo Quarto</button>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Número</th>
+                            <th>Tipo</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="lista-quartos"></tbody>
+                </table>
+            </div>
+
+            <div id="tela-cadastro-quarto" class="tela-hidden">
+                <h2>Cadastro de Quarto</h2>
+
+                <input id="numero" placeholder="Número do quarto">
+                <input id="tipo" placeholder="Tipo">
+
+                <button onclick="cadastrarQuarto()">Cadastrar</button>
+                <button onclick="mostrarTela('quartos')">Voltar</button>
+            </div>
+
+            <div id="tela-reservas" class="tela-hidden">
+                <div class="topo">
+                    <h2>Reservas</h2>
+                    <button onclick="mostrarTela('cadastro-reserva')">+ Nova Reserva</button>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Hóspede</th>
+                            <th>Entrada</th>
+                            <th>Saída</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="lista-reservas"></tbody>
+                </table>
+            </div>
+
+            <div id="tela-cadastro-reserva" class="tela-hidden">
+                <h2>Cadastro de Reserva</h2>
+
+                <input id="hospede" placeholder="Hóspede">
+                <input id="entrada" type="date">
+                <input id="saida" type="date">
+
+                <button onclick="cadastrarReserva()">Cadastrar</button>
+                <button onclick="mostrarTela('reservas')">Voltar</button>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="modal" class="modal-hidden">
+        <div class="modal-box">
+            <p id="modal-texto">Tem certeza?</p>
+            <button class="btn-excluir">Excluir</button>
+            <button onclick="fecharModal()">Cancelar</button>
+        </div>
+    </div>
+
+    <footer><p>&copy; Hotel Reservas - Projeto Full Stack</p></footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

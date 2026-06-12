@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: white;
+}
+.container{
+    display: flex;
+    height: 100vh;
+}
+.sidebar{
+    width: 220px;
+    background: #080838;
+    color: whitesmoke;
+    padding: 20px;
+}
+.sidebar button{
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    color: white;
+    background: #080838;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+.sidebar button:hover{
+    background: #393f86;
+}
+.content{
+    flex: 1;
+    padding: 20px;
+}
+.topo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+table{
+    width: 100%;
+    margin-top: 20px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+th{
+    background-color: whitesmoke;
+    padding: 10px;
+}
+td{
+    padding: 10px;
+    text-align: center;
+}
+button{
+    background-color: blue;
+    color: white;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn-excluir{
+    background: red;
+    color: white;
+}
+.btn-ver{
+    background-color: aqua;
+    color: white;
+}
+.modal-hidden,
+.tela-hidden{
+    display: none;
+}
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal-box{
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+footer{
+    padding: 10px;
+    color: gray;
+    background-color: whitesmoke;
+    text-align: center;
+}
